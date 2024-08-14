@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="847.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller.UserController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="88.0" layoutX="-6.0" stroke="BLACK" strokeType="INSIDE" width="854.0" />
+      <Label fx:id="heading" alignment="CENTER" contentDisplay="CENTER" layoutX="323.0" layoutY="28.0" prefHeight="32.0" prefWidth="197.0" text="Admin Screen" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Label>
+      <Label fx:id="user" contentDisplay="CENTER" layoutX="86.0" layoutY="119.0" prefHeight="20.0" prefWidth="66.0" text="Username:" textAlignment="CENTER">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="usernameField" layoutX="159.0" layoutY="117.0" prefHeight="25.0" prefWidth="111.0" promptText="Username" />
+      <Label fx:id="townLabel" contentDisplay="CENTER" layoutX="284.0" layoutY="119.0" prefHeight="20.0" prefWidth="51.0" text="Phone:" textAlignment="CENTER">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="phoneField" layoutX="335.0" layoutY="117.0" prefHeight="25.0" prefWidth="111.0" promptText="Phone Number" />
+      <Label fx:id="countrylabel" contentDisplay="CENTER" layoutX="462.0" layoutY="119.0" prefHeight="20.0" prefWidth="66.0" text="Password:" textAlignment="CENTER">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="passwordField" layoutX="528.0" layoutY="117.0" prefHeight="25.0" prefWidth="111.0" promptText="Password" />
+      <Label fx:id="typeLabel" contentDisplay="CENTER" layoutX="654.0" layoutY="119.0" prefHeight="20.0" prefWidth="37.0" text="Role:" textAlignment="CENTER">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="roleField" layoutX="691.0" layoutY="117.0" prefHeight="25.0" prefWidth="66.0" promptText="Role" />
+      <Button fx:id="add" layoutX="229.0" layoutY="159.0" mnemonicParsing="false" onAction="#add" prefHeight="25.0" prefWidth="78.0" style="-fx-background-color: #1e90ff;" text="Add User" textFill="WHITE" />
+      <Button fx:id="update" layoutX="328.0" layoutY="159.0" mnemonicParsing="false" onAction="#update" style="-fx-background-color: #1e90ff;" text="Update User" textFill="WHITE" />
+      <Button fx:id="delete" layoutX="427.0" layoutY="159.0" mnemonicParsing="false" onAction="#delete" style="-fx-background-color: #1e90ff;" text="Delete User" textFill="WHITE" />
+      <Button fx:id="viewAllUsers" layoutX="522.0" layoutY="159.0" mnemonicParsing="false" onAction="#viewAll" style="-fx-background-color: #1e90ff;" text="View All Users" textFill="WHITE" />
+      <TableView fx:id="table" layoutX="117.0" layoutY="215.0" prefHeight="314.0" prefWidth="614.0">
+         <columns>
+            <TableColumn fx:id="idCol" editable="false" prefWidth="110.0" resizable="false" text="User ID" />
+            <TableColumn fx:id="usernameCol" editable="false" prefWidth="186.0" resizable="false" text="Username" />
+            <TableColumn fx:id="phoneCol" editable="false" prefWidth="165.0" resizable="false" text="Phone" />
+            <TableColumn fx:id="roleCol" editable="false" prefWidth="142.0" resizable="false" text="Role" />
+         </columns>
+      </TableView>
+      <Button fx:id="logout" layoutX="21.0" layoutY="552.0" mnemonicParsing="false" onAction="#logout" prefHeight="25.0" prefWidth="78.0" style="-fx-background-color: red;" text="Logout" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="addSelectedRowBTN" layoutX="364.0" layoutY="540.0" mnemonicParsing="false" onAction="#addSelectedRow" text="Add Selected Item" />
+   </children>
+</AnchorPane>
